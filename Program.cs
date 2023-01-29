@@ -4,6 +4,7 @@
     {
         public static void Main(string[] args)
         {
+
             #region JobScheduling
             /*
             List<Job> jobs = new List<Job>();
@@ -22,6 +23,7 @@
             */
             #endregion
 
+
             #region Dijkstra
             /*
             Dijkstra dijkstra = new Dijkstra();
@@ -39,6 +41,8 @@
             dijkstra.findShortestPath(graph, 0);
             */
             #endregion
+
+
 
             #region DijkstraAdjList
             /*
@@ -117,8 +121,6 @@
             graph.greedyColoring();
             */
             #endregion
-
-
 
         }
     }
