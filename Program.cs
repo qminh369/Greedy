@@ -21,9 +21,9 @@
 
             job.jobScheduling(jobs, 3);
             */
-            #endregion    
+            #endregion 
 
-            
+
             #region Dijkstra
             /*
             Dijkstra dijkstra = new Dijkstra();
@@ -42,21 +42,6 @@
             */
             #endregion
 
-
-            #region GraphColoring
-            /*
-            GraphColoring graph = new GraphColoring(5);
-            graph.addEdge(0, 1);
-            graph.addEdge(0, 2);
-            graph.addEdge(1, 2);
-            graph.addEdge(1, 3);
-            graph.addEdge(2, 3);
-            graph.addEdge(3, 4);
-
-            Console.WriteLine("Coloring of graph: ");
-            graph.greedyColoring();
-            */
-            #endregion
 
 
             #region DijkstraAdjList
