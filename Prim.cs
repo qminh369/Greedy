@@ -11,7 +11,7 @@ namespace Greedy
         #region Field
         private int _vertex = 5;
         #endregion
-
+		
         #region Properties
         public int Vertex { get => _vertex; set => _vertex = value; }
         #endregion
@@ -78,6 +78,7 @@ namespace Greedy
 			}
 
 			printMST(_parent, _graph);
-		}
+		} 
+
 	}
 }

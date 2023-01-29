@@ -12,7 +12,7 @@ namespace Greedy
         private char _id;
         private int _deadline;
         public int _profit;
-        #endregion
+        #endregion   
 
         #region Properties
         public char Id { get => _id; set => _id = value; }
@@ -63,7 +63,7 @@ namespace Greedy
             Console.WriteLine();
 
         }
-
+        
     }
 
     class JobProfit : IComparer<Job>
