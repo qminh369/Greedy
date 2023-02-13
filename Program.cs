@@ -1,4 +1,11 @@
-﻿namespace Greedy
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace Greedy
 {
     public class Program
     {
@@ -8,18 +15,19 @@
             #region JobScheduling
             /*
             List<Job> jobs = new List<Job>();
+            string[] lines = File.ReadAllLines(@"C:\Users\MinhDepZai\source\repos\Greedy\JobSequence.txt");
 
-            jobs.Add(new Job('a', 2, 100));
-            jobs.Add(new Job('b', 1, 19));
-            jobs.Add(new Job('c', 2, 27));
-            jobs.Add(new Job('d', 1, 25));
-            jobs.Add(new Job('e', 3, 15));
-
+            foreach (string line in lines)
+            {
+                string Line = line.Replace("\t", "");
+                // Console.WriteLine('\n' + Line);
+                jobs.Add(new Job(Line.Substring(0, 6), Convert.ToInt32(Line[6]), Convert.ToInt32(Line.Substring(7, 4))));
+            }
             Console.WriteLine("Following is maximum " + "profit sequence of jobs");
 
             Job job = new Job();
 
-            job.jobScheduling(jobs, 3);
+            job.jobScheduling(jobs, 5);
             */
             #endregion 
 

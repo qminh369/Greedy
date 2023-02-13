@@ -9,13 +9,13 @@ namespace Greedy
     public class Job
     {
         #region Field
-        private char _id;
+        private string _id;
         private int _deadline;
-        public int _profit;
+        private int _profit;
         #endregion   
 
         #region Properties
-        public char Id { get => _id; set => _id = value; }
+        public string Id { get => _id; set => _id = value; }
         public int Deadline { get => _deadline; set => _deadline = value; }
         public int Profit { get => _profit; set => _profit = value; }
         #endregion
@@ -23,7 +23,7 @@ namespace Greedy
         #region Constructor
         public Job() { }
 
-        public Job(char _id, int _deadline, int _profit)
+        public Job(string _id, int _deadline, int _profit)
         {
             this._id = _id;
             this._deadline = _deadline;
@@ -43,7 +43,7 @@ namespace Greedy
             bool[] _result = new bool[t];
 
             // To store result (Sequence of jobs)
-            char[] _job = new char[t];
+            string[] _job = new string[t];
 
             for (int i = 0; i < _jobs_length; i++)
             {
@@ -59,7 +59,7 @@ namespace Greedy
                 }
             }
 
-            foreach (char jb in _job) { Console.Write(jb + " "); }
+            foreach (string jb in _job) { Console.Write(jb + " "); }
             Console.WriteLine();
 
         }
@@ -70,12 +70,12 @@ namespace Greedy
     {
         public int Compare(Job x, Job y)
         {
-            if (x._profit == 0 || y._profit == 0)
+            if (x.Profit == 0 || y.Profit == 0)
             {
                 return 0;
             }
 
-            return (y._profit).CompareTo(x._profit);
+            return (y.Profit).CompareTo(x.Profit);
         }
     }
 
