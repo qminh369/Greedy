@@ -11,6 +11,29 @@ namespace Greedy
     {
         public static void Main(string[] args)
         {
+            #region ExchangeMoney
+            Console.OutputEncoding = Encoding.UTF8;
+            int[] listMoney = new int[10];
+
+            string[] lines = File.ReadAllLines(@"C:\Users\admin\Source\Repos\Greedy\Money.txt");
+
+            int j = 0;
+            foreach (string line in lines)
+            {
+                // Console.WriteLine(line);
+                listMoney[j] = Convert.ToInt32(line);
+                j++;
+            }
+            int[] iquantity = new int[10];
+            Console.WriteLine("Số tiền cần đổi: ");
+            Exchange exchangeMoney = new Exchange(listMoney);
+            int moneyExchange = Convert.ToInt32(Console.ReadLine());
+            iquantity = exchangeMoney.ExchangeMoney(moneyExchange);
+            for (int i = 0; i <= 9; i++)
+            {
+                Console.WriteLine("Số tờ {0}: {1}", listMoney[i], iquantity[i]);
+            }
+            #endregion
 
             #region JobScheduling
             /*
@@ -30,7 +53,6 @@ namespace Greedy
             job.jobScheduling(jobs, 20);
             */
             #endregion
-
 
             #region Dijkstra
             /*
@@ -55,9 +77,8 @@ namespace Greedy
             */
             #endregion
 
-
             #region GraphColoring
-            
+            /*
             GraphColoring graph = new GraphColoring(10);
 
             string[] lines = File.ReadAllLines(@"C:\Users\admin\Source\Repos\Greedy\dataGraphColoring.txt");
@@ -73,7 +94,7 @@ namespace Greedy
             
             Console.WriteLine("Coloring of graph: ");
             graph.greedyColoring();
-            
+            */
             #endregion
 
         }
