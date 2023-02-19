@@ -3,7 +3,7 @@
     class Dijkstra
     {
         #region Field
-        private static int _vertex = 9;
+        private static int _vertex = 50;
         #endregion
 
         #region Properties
